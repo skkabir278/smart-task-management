@@ -15,6 +15,10 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
 
+app.get("/",(req,res)=>{
+    res.json({message:"hello"})
+})
+
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
